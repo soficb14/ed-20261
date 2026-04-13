@@ -43,5 +43,5 @@ int main(){
     fatRecurs(n);
     printf("Por recursividade: %d! = %d\n", n, fatRecurs(n));
 
-    printf("De acordo com os testes, conclui-se que o método iterativo é mais eficiente, porque a notacao big o é o(1) e a da recursiva é o(n), por ser em stack e alcançar rapidamente o overflow.\n");
+    printf("\nDe acordo com os testes, conclui-se que o método iterativo é mais eficiente, porque a notacao big o é o(1) e a da recursiva é o(n), por ser em stack e alcançar rapidamente o overflow.\n");
 }
