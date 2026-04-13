@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "caixa_eletronico.h"
 
 //1. funcao de minimizacao (resto da divisão pela nota de maior valor possível)
 void cQtdNotas(int valor){
@@ -35,21 +36,4 @@ void cQtdNotas(int valor){
             printf("%d nota(s) de %d\n", qtdNotas[i], notas[i]);
         }
     }
-}
-
-
-int main (){
-    int valor;
-
-    //2. scanf quanto quer sacar
-    printf("Quanto voce quer sacar?\n");
-    scanf("%d", &valor);
-
-    
-
-    //4. chamar funcao
-    cQtdNotas(valor);
-
-    return 0;
-
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "imc.h"
 
 //1. funcao para calcular imc
 void calcularIMC (float peso, float altura){
@@ -18,28 +19,5 @@ void calcularIMC (float peso, float altura){
     }
 
     printf("--------------------\n");
-
-}
-
-int main (){
-
-//3. casos
-
-    printf("Peso: 0kg, Altura: 1.75m\n");
-    calcularIMC(0, 1.75);
-
-    printf("Peso: 10kg, Altura: 1.75m\n");
-    calcularIMC(10, 1.75);
-
-    printf("Peso: 70kg, Altura: 1.75m\n");
-    calcularIMC(70, 1.75);
-
-    printf("Peso: 90kg, Altura: 1.75m\n");
-    calcularIMC(90, 1.75);
-
-    printf("Peso: 110kg, Altura: 1.75m\n");
-    calcularIMC(110, 1.75);
-
-    return 0;
 
 }
