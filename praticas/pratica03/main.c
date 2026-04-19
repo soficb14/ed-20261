@@ -5,7 +5,6 @@
 
 int main (void){
     printf("=== Teste do TDA Conta");
-
     //Criação do TDA
     Conta *c = conta_criar(123);
     assert(c != NULL);
