@@ -3,7 +3,7 @@
 
 #define SIZE 10
 
-/*int main() {
+int main() {
     int matriz[SIZE][SIZE];
     int i, j, k;
     clock_t start, end;
@@ -46,4 +46,3 @@
 
     return 0;
 }
-*/
