@@ -14,7 +14,7 @@ int buscaS(int v[], int n){
     }
 }
 
-/*int main () {
+int main () {
     int v[100];
     int n;
 
@@ -37,4 +37,3 @@ int buscaS(int v[], int n){
    
     printf("O programa tem complexidade:\n  -Melhor caso: O(1) (achou na primeira posição)\n  -Pior caso: O(n)\n");
 }
-    */

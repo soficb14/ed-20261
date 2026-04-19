@@ -29,7 +29,7 @@ int fatRecurs(int n){
     }
 }
 
-/*3. main para chamar ambas as funcoes
+//3. main para chamar ambas as funcoes
 int main(){
     int n;
 
@@ -45,4 +45,3 @@ int main(){
 
     printf("\nDe acordo com os testes, conclui-se que o método iterativo é mais eficiente, porque a notacao big o é o(1) e a da recursiva é o(n), por ser em stack e alcançar rapidamente o overflow.\n");
 }
-*/
