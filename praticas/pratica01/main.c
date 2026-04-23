@@ -7,6 +7,9 @@
 int main (){
 
     //potencia
+    printf("Teste: 5^0 = %d (Esperado: 1)\n", calcularPotencia(5, 0));  
+    printf("Teste: 0^5 = %d (Esperado: 0)\n", calcularPotencia(0, 5));  
+
     printf("1. Potencia:\n");
          int resultado = calcularPotencia(3, 5);
     printf("3^5 = %d\n", resultado);
@@ -39,6 +42,12 @@ int main (){
 
     //caixa
     printf("\n3. Caixa Eletronico:\n");
+
+    printf("Teste Saque 1 real:\n");
+    cQtdNotas(1); // Deve exibir a mensagem de erro 
+    printf("Teste Saque 3 reais:\n");
+    cQtdNotas(3);
+
     int valor;
 
     printf("Quanto voce quer sacar?\n");
@@ -47,17 +56,21 @@ int main (){
 
     //media
     printf("\n4. Media:\n");
+    printf("Teste 1: n = 0 (Caso de erro)\n");
+    float m1 = calcularMedia(0); 
+    
+    printf("Teste 2: n = -5 (Caso de erro)\n");
+    float m2 = calcularMedia(-5);
+
+    printf("\nTeste 3: Entrada do usuário\n");
+    printf("Digite de quantos números vai ser a média: ");
     int n;
-
-    printf("Digite de quantos números vai ser a média\n");
     scanf("%d", &n);
-
-    if(n <= 0 || n > 100){
-        printf("Inválido! Tente um número maior do que 0 e menor do que 100.\n");
-        return 1;
-        }
-        float media = calcularMedia(n);
-        printf("Media = %.2f\n", media);
+    
+    float mediaUsuario = calcularMedia(n);
+    if (n > 0) {
+        printf("Media final = %.2f\n", mediaUsuario);
+    }
   
 
     return 0;
