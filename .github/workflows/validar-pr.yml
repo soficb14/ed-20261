@@ -37,11 +37,7 @@ jobs:
                 exit 1
               fi
             else
-              # Se não houver .h, compila os arquivos .c individualmente
-              for file in "$folder"*.c; do
-                # Garante que o arquivo existe (evita falhas se a pasta estiver vazia)
-                [ -f "$file" ] || continue
-                
+
                 echo "Compilando $file..."
                 if gcc "$file" -o "${file%.c}.out" -lm; then
                   echo "✅ Arquivo $file compilado com sucesso!"
