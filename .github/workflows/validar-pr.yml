@@ -35,7 +35,6 @@ jobs:
               fi
             else
               FILES=$(find "$folder" -name "*.c")
-              for file in $FILES; do
                 echo "Compilando $file..."
                 gcc "$file" -o "$folder/a.out" -lm
                 
