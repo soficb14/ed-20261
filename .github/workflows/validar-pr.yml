@@ -15,15 +15,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y gcc
-
       - name: Validar arquivos de código por pasta
         shell: bash
         run: |
-          # Loop seguro que lida nativamente com espaços nos nomes das pastas
-          for folder in ./praticas/*/; do
-            # Garante que é um diretório válido antes de prosseguir
-            [ -d "$folder" ] || continue
-            
             echo "Validando arquivos na pasta $folder..."
             
             # Verifica se existem arquivos .h na pasta
@@ -37,11 +31,7 @@ jobs:
                 exit 1
               fi
             else
-              # Se não houver .h, compila os arquivos .c individualmente
-              for file in "$folder"*.c; do
-                # Garante que o arquivo existe (evita falhas se a pasta estiver vazia)
-                [ -f "$file" ] || continue
-                
+
                 echo "Compilando $file..."
                 if gcc "$file" -o "${file%.c}.out" -lm; then
                   echo "✅ Arquivo $file compilado com sucesso!"
