@@ -18,12 +18,13 @@ jobs:
       - name: Validar arquivos de código por pasta
         shell: bash
         run: |
+
             echo "Validando arquivos na pasta $folder..."
             
             # Verifica se existem arquivos .h na pasta
             if ls "$folder"*.h >/dev/null 2>&1; then
               echo "Compilando todos os arquivos .c na pasta $folder..."
-              
+
               if gcc "$folder"*.c -o "$folder/a.out" -lm; then
                 echo "✅ Pasta $folder compilada com sucesso!"
               else
